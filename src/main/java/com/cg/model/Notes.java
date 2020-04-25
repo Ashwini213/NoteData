@@ -1,6 +1,5 @@
 package com.cg.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,11 +13,10 @@ public class Notes {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 
 	private int noteId;
-	@Column
 	private String noteName;
-	@Column
+	
 	private String noteInfo;
-	@Column
+	
 	private String noteParty;
 
 	public int getNoteId() {
