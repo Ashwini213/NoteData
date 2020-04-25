@@ -25,19 +25,19 @@ public class NotesController {
 	private NotesService notesService;
 
 	@PostMapping(value = "/note")
-	private Notes createNote(@RequestBody Notes books) {
-		notesService.createNote(books);
-		return books;
+	private Notes createNote(@RequestBody Notes notes) {
+		notesService.createNote(notes);
+		return notes;
 	}
 
 	@GetMapping(value = "/note")
-	private List<Notes> getAllBooks() {
-		return notesService.getAllBooks();
+	private List<Notes> getAllNotes() {
+		return notesService.getAllNotes();
 	}
 
 	@GetMapping(value = "/note/{noteId}")
 	private Notes getNote(@PathVariable("noteId") int noteId) {
-		return notesService.getBooksById(noteId);
+		return notesService.getNotesById(noteId);
 	}
 
 	@PutMapping(value = "/note/{noteId}")
