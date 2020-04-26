@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.print.attribute.standard.DateTimeAtCreation;
 
 @Entity
 @Table(name = "MYNOTES")
@@ -18,6 +19,8 @@ public class Notes {
 	private String noteInfo;
 	
 	private String noteParty;
+	
+	private DateTimeAtCreation noteDateTime;
 
 	public int getNoteId() {
 		return noteId;
@@ -51,9 +54,19 @@ public class Notes {
 		this.noteParty = noteParty;
 	}
 
+	public DateTimeAtCreation getNoteDateTime() {
+		return noteDateTime;
+	}
+
+	public void setNoteDateTime(DateTimeAtCreation noteDateTime) {
+		this.noteDateTime = noteDateTime;
+	}
+
 	@Override
 	public String toString() {
 		return "Notes [noteId=" + noteId + ", noteName=" + noteName + ", noteInfo=" + noteInfo + ", noteParty="
-				+ noteParty + "]";
+				+ noteParty + ", noteDateTime=" + noteDateTime + "]";
 	}
+
+	
 }
